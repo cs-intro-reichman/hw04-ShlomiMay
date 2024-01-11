@@ -85,8 +85,3 @@ public class StringOps {
         return array;
     }
 }
-
-        return array;
-    }
-}
-
