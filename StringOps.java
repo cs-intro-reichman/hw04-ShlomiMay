@@ -22,9 +22,9 @@ public class StringOps {
     //////                                               ///////
     ////////////////////////////////////////////////////////////
     public static void main(String[] args) {
-        String s = "Intro to coMPUter   sCIEnce ";
+        String s = "   Intro to coMPUter   sCIEnce ";
 		//System.out.println(capVowelsLowRest(s));
-		//System.out.println(camelCase(s));
+		System.out.println(camelCase(s));
 		//allIndexOf("Hello world", 'l');
     }
 
@@ -47,6 +47,7 @@ public class StringOps {
 
     public static String camelCase (String string) {
         String converted = "";
+		boolean firstWord = true;
 		for (int i = 0; i < string.length(); i++) {
 			boolean newWord = false;
 			while (((char) (string.charAt(i)) == ' ') && (i != string.length() - 1)) {
@@ -56,11 +57,12 @@ public class StringOps {
 					break;
 				}
 			}
-			if (newWord) {
+			if (newWord && !firstWord) {
 				converted += (string.charAt(i) >= 97 && string.charAt(i) <= 122) ? (char) (string.charAt(i) - 32) : string.charAt(i);
 			} else {
 				converted += (string.charAt(i) >= 65 && string.charAt(i) <= 90) ? (char) (string.charAt(i) + 32) : string.charAt(i);
 			}
+			firstWord = false;
 		}
         return converted;
     }
@@ -72,7 +74,6 @@ public class StringOps {
 				count++;
 			}
 		}
-		System.out.println(count);
 		int[] array = new int[count];
 		int j = 0;
 		for (int i = 0; i < string.length(); i++) {
@@ -81,6 +82,10 @@ public class StringOps {
 				j++;
 			}
 		}
+        return array;
+    }
+}
+
         return array;
     }
 }
