@@ -24,7 +24,7 @@ public class StringOps {
     public static void main(String[] args) {
         String s = "   Intro to coMPUter   sCIEnce ";
 		//System.out.println(capVowelsLowRest(s));
-		System.out.println(camelCase(s));
+		//System.out.println(camelCase(s));
 		//allIndexOf("Hello world", 'l');
     }
 
@@ -85,3 +85,4 @@ public class StringOps {
         return array;
     }
 }
+
